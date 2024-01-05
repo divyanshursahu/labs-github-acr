@@ -31,4 +31,4 @@ jobs:
         tags: |
           ${{ secrets.ACR_SERVER }}/${{ env.IMAGE_REPOSITORY_NAME }}:${{ env.IMAGE_TAG }}
         # added by me
-          ${{ secrets.ACR_SERVER }}/hello_test:${{ env.IMAGE_TAG }}. 
+          ${{ secrets.ACR_SERVER }}/hello_test:${{ env.IMAGE_TAG }}
