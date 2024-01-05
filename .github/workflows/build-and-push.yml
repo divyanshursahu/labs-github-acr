@@ -12,7 +12,7 @@ jobs:
     name: Build BrezyWeather container image
     runs-on: ubuntu-latest
 
-  steps:
+    steps:
     - name: Setup docker build X
       uses: docker/setup-buildx-action@v3.0.0
 
