@@ -4,7 +4,7 @@ on:
     branches:
       - 'main'
 env:
-  IMAGE_REPOSITORY_MAIN: brezyweather
+  IMAGE_REPOSITORY_NAME: brezyweather
   IMAGE_TAG: 1.0.0
 
 jobs:
@@ -27,4 +27,5 @@ jobs:
       uses: docker/build-push-action@v5.1.0
       with:
         push: true
+        #tags example: cbbrezyweatherprodxxx.azurecr.io/brezyweather:1.0.0
         tags: ${{ secrets.ACR_SERVER }}/${{ env.IMAGE_REPOSITORY_NAME }}:${{ env.IMAGE_TAG }}
