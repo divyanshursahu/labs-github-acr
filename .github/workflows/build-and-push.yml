@@ -1,8 +1,10 @@
 name: Build and Push Image
 on:
-  push:
-    branches:
-      - 'main'
+  workflow_dispatch:
+# on:
+#   push:
+#     branches:
+#       - 'main'
 env:
   IMAGE_REPOSITORY_NAME: brezyweather
   IMAGE_TAG: 1.0.0
@@ -30,5 +32,4 @@ jobs:
         #tags example: cbbrezyweatherprodxxx.azurecr.io/brezyweather:1.0.0
         tags: |
           ${{ secrets.ACR_SERVER }}/${{ env.IMAGE_REPOSITORY_NAME }}:${{ env.IMAGE_TAG }}
-        # added by me
-          ${{ secrets.ACR_SERVER }}/hello_test:${{ env.IMAGE_TAG }}
+          ${{ secrets.ACR_SERVER }}/hello_test:${{ env.IMAGE_TAG }} 
